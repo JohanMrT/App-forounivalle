@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>confirmardatos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--img [src]="currentImage" *ngIf="currentImage"-->
+  <!--style="height: auto; max-width: 23vh;"-->
+  <br>
+  <br>
+    <ion-avatar class="configimagen">
+      <img  [src]="currentImage">
+    </ion-avatar>
+      
+      
+    <ion-fab vertical="center" horizontal="end" slot="fixed">
+      <ion-fab-button (click)="presentActionSheet()">
+         <ion-icon name="camera"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+    <p >Al oprimir "Crear cuenta" aceptas los terminos y
+      condiciones para el uso de esta aplicacion.
+      Ver terminos y condiciones  </p>
+
+</ion-content>

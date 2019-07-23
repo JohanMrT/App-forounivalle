@@ -8,14 +8,28 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { firebaseConfig} from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AuthGuardService } from './servicios/auth-guard.service';
+import { AuthenticationService } from './servicios/authentication.service';
+import { Camera } from "@ionic-native/camera/ngx";
 
 @NgModule({
   declarations: [AppComponent],
+
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule ],
+
   providers: [
     StatusBar,
     SplashScreen,
+    AuthGuardService,
+    AuthenticationService,
+    Camera,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

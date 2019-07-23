@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>crearcuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-text style="text-align: center" >
+        <h1>Ingresa tus datos</h1>
+      </ion-text>
+  
+  <br>
+  <ion-item>
+      <ion-label position="stacked" >Como te llamas</ion-label>
+      <ion-input type="text" placeholder="nombre" ></ion-input>
+      <ion-input type="text" placeholder="Apellido" ></ion-input>
+    </ion-item>
+    <br>
+    
+
+  <ion-item>
+    <ion-label position="stacked" >Correo electronico</ion-label>
+    <ion-input  type="text" placeholder="example@correounivalle.edu.co" ></ion-input>
+  </ion-item>
+  <br>
+  <ion-item>
+      <ion-label position="stacked" >Contraseña</ion-label>
+      <ion-input type="password" placeholder="Contraseña"></ion-input>
+      <ion-input type="password" placeholder="Confirma contraseña"></ion-input>
+  </ion-item>
+
+<br>  
+
+  <ion-row>
+    <ion-col width-50 style="text-align : center">
+        <ion-button  routerLink="/confirmardatos" text-center color="danger" shape="round">Siguiente</ion-button>
+    </ion-col>
+  </ion-row> 
+  <br>
+  <ion-row>
+      <ion-col>
+         <p  text-center routerLink="/login" color="danger" >Ya tengo una cuenta</p>
+      </ion-col>
+  </ion-row>
+
+</ion-content>

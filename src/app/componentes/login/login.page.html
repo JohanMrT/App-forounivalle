@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title text-center >LOGIN</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <img class="icon" src="assets/icon/chat.svg" alt="">
+  <br>
+  <ion-item>
+    <ion-label position="floating" color="medium">Correo electronico</ion-label>
+    <ion-input type="text" [(ngModel)]="email" name="Correo" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label position="floating" color="medium">Contraseña</ion-label>
+      <ion-input [(ngModel)]="password" type="password" name="Contraseña"></ion-input>
+  </ion-item>
+<br>
+  <ion-row>
+        <ion-col width-50 style="text-align: center">
+        <ion-button (click) = "OnSubmitLogin()" fill="outline" color="danger" shape="round">Entrar</ion-button>
+        </ion-col>
+        <!--ion-col width-50 style="text-align: left">
+        <ion-button color="danger" shape="round">Entrar</ion-button>
+        </ion-col-->
+  </ion-row>
+      
+      <p text-center routerLink="/crearcuenta">  Crear cuenta </p>
+      
+
+</ion-content>
+
+<!--[(ngModel)] enrutmos los daros de cooreo a la variable email 
+de login.page.ts igualmente con el password-->
